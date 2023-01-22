@@ -9,7 +9,7 @@ def index():
     if request.method == "POST":
         user_input = request.form["text"]
         # Use the user_input to generate marketing text using a language model
-        
+        api_key = "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"
         model_engine = "text-davinci-002"
         prompt = (f"complete the text: {user_input}")
         completions = openai.Completion.create(
