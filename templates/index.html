@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ajudante de Texto Peter</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles.css')}}">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Text Completion</h1>
+      <form method="post">
+        <label for="text">Insira o texto</label>
+        <br>
+        <textarea id="text" name="text"></textarea>
+        <br>
+        <input type="submit" value="Submit">
+      </form>
+      {% if message %}
+        <div class="message">
+          <p>{{ message }}</p>
+        </div>
+      {% endif %}
+    </div>
+  </body>
+</html>
+
